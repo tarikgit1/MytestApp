@@ -13,6 +13,11 @@ sealed class Result<out T : Any> {
         return when (this) {
             is Success<*> -> "Success[data=$data]"
             is Error -> "Error[exception=$exception]"
+
         }
+    }
+
+    override fun equals(other: Any?): Boolean {
+        return super.equals(other)
     }
 }
